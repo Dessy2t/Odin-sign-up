@@ -1,0 +1,28 @@
+body{
+  font-family: "Josefin Slab", serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.img{
+  display: flex;
+  width: 50%;
+  height: 96%;
+  margin: 1% 1% 1% 1%;
+  background: url(./images/halie-west-25xggax4bSA-unsplash.jpeg)no-repeat;
+  background-size: cover;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.img-description{
+  margin-top: auto;
+  margin-bottom: 10px;
+  font-size: 100%;
+  color: white;
+  font-weight: 900;
+}
