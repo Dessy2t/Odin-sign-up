@@ -12,12 +12,67 @@
     </head>
     <body>
         <div class="img">
+            <div class="img-logo">
+                <div class="logo">
+                 <img src="./images/odin-logo.png" alt="Odin logo" class="odin-img" height="100px">
+                 <h2>ODIN</h2>
+                </div>
+            </div>
             <div class="img-description">
                 <p class="img-info">Photo by Halie West</p>
                 <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">
                     <p class="img-info">https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA</p>
                 </a>
-            </div>
+            </div>  
         </div>
+        <div class="form">
+            <div class="form-info">
+                <h2>
+                  This is not a real online service! You know you need something
+                  like this in your life to help you realize your deepest dreams.
+                  Sign up <i>now</i> to get started. <br /><br />
+                  You <i>know</i> you want to.
+                </h2>
+            </div>
+            <form action="">
+              <h1>Let's do this!</h1>
+              <div class="inputs">
+                  <div class="first-name">
+                     <label for="first-name" class="form-label">FIRST NAME</label>
+                     <input required type= "text" class="form-input" id="first-name" placeholder="First Name" autocomplete="on">
+                  </div>
+                  <div class="last-name">
+                     <label for="last-name" class="form-label">LAST NAME</label>
+                     <input required type="text" class="form-input" id="last-name" placeholder="Last Name">
+                 </div>
+              </div>
+              <div class="inputs">
+                <div class="email">
+                     <label for="email" class="form-label">EMAIL</label> 
+                     <input required type="email" class="form-input" id="email" placeholder="Email" autocomplete="off">
+                 </div>
+                 <div class="phone-number">
+                     <label for="phone-number" class="form-label">PHONE NUMBER</label>
+                     <input required type="tel" class="form-input" id="phone-number" placeholder="Phone Number">
+                 </div>
+              </div>
+              <div class="inputs">
+                <div class="password">
+                     <label for="password" class="form-label">PASSWORD</label>
+                     <input required type="password" class="form-input" id="password" placeholder="Password">
+                 </div>
+                 <div class="confirm-password">
+                     <label for="confirm-password" class="form-label">CONFIRM PASSWORD</label>
+                     <input required type="password" class="form-input" id="confirm-password" placeholder="Confirm Password">
+                 </div>
+              </div>
+              <div class="form-end">
+                 <div class="errorMessage"></div>
+                 <button class="btn" type="submit">Create Account</button>
+                 <h2>Already have an account? <a href="" class="login">Log in</a></h2>
+              </div>
+            </form>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>

@@ -9,20 +9,140 @@ body{
 }
 .img{
   display: flex;
-  width: 50%;
-  height: 96%;
-  margin: 1% 1% 1% 1%;
+  align-items: center;
+  width: 60vh;
+  height: 100%;
+  margin: 0%;
   background: url(./images/halie-west-25xggax4bSA-unsplash.jpeg)no-repeat;
   background-size: cover;
   align-content: center;
   justify-content: center;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 .img-description{
   margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 100%;
   color: white;
   font-weight: 900;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+   1px 1px 0 #000;
+   background-color: rgba(20, 16, 16, 0.272);
+}
+
+.logo{
+display: flex;
+flex-direction: row;
+width: 100%;
+}
+
+.img-logo{
+  display: flex;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.form{
+  width: 60%;
+  margin: 0%;
+  padding: 0%;
+  margin-top: 5%;
+}
+.form > * {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.form-label{
+  font-weight: 500;
+  font-size: 13px;
+  display: block;
+  transition: all 0.5s;
+  transform: translateY(0.3rem);
+}
+.form-input{
+  border: 2px solid gray;
+  color: #333;  
+  font-size: 12px;
+  padding: 0.2rem 0.2rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  display: block;
+  transition: all 0.5s;
+  margin-top: 5%;
+  padding-right: 10%;
+}
+.form-input:focus{
+  transition: 0.2s;
+  outline: none;
+  border: 2px solid blue;
+}
+.form-input:placeholder-shown + .form-label{
+  opacity: o;
+  visibility: hidden;
+}
+form{
+  padding-top: 2%;
+  width: 90%;
+  margin-left: 0%;
+  background-color: rgba(39, 37, 98, 0.034);
+}
+.inputs{
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+}
+.inputs> :last-child{
+  padding-left: 10%;
+}
+.form-end{
+  margin-top: 20px;
+  position: absolute;
+  font-size: 10px;
+}
+.btn{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  background: #009900;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0.5px 0.5px rgba(225, 225, 225, 0.5),
+    0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #dfdedf;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  border-bottom: 2px solid rgb(139, 139, 139);
+  border-right: 2px solid rgb(139, 139, 139);
+}
+.btn:hover {
+  outline: 0;
+  box-shadow: inset 0px 0.8px 1px -0.25px rgba(225, 225, 225, 0.2),
+    0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+}
+.login{
+  color: #009900;
+}
+.error{
+  border: 2px solid red;
+}
+.errorMessage{
+  font-size: 23px;
+  font-weight: 900;
+  color: red;
+}
+
+.odin-img{
+  width: 100%;
+  align-items: center;
+
 }

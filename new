@@ -1,0 +1,68 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+  console.log("hi");
+
+  const email = document.querySelector("#email");
+  const phone = document.querySelector("#phone-number");
+  const password = document.querySelector("#password");
+  const confirmpassword = document.querySelector("#confirm-password");
+  const errorMessage = document.querySelector(".errorMessage");
+
+  const inputs = [email, phone, password, confirmpassword];
+
+  inputs.forEach(item => {
+    item.addEventlistener("focusin", () => {
+      errorMessage.textContent = "";
+      item.classList.remove("error");
+      if (item == password || item == confirmpassword) {
+        password.classList.remove("error");
+        confirmpassword.classList.remove("error");
+      }
+    });
+  });
+
+  const submit = (e) => {
+    e.preventDefault();
+    if (password.value !== confirmpassword.value) {
+      password.classList.add("error");
+      confirmpassword.classList.add("error");
+      errorMessage.textContent = "passwords don't match.";
+      return;
+    }
+    if (!phone.value.matchMedia(
+      /(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})/
+    )) {
+      phone.classList.add("error");
+      errorMessage.textContent = "phone number needs to br exactly 10 numbers.";
+      return;
+    }
+    if (password.value.length < 4) {
+      password.classList.add("error");
+      errorMessage.textContent = "Password needs to be at least 4 characters long.";
+      return;
+    }
+    if (!password.value.match(/[a-z]/)) {
+      password.classList.add("error");
+      errorMessage.textContent = "Password needs to have at least 1 lower case letter.";
+      return;
+    }
+    if (!password.value.match(/[A-Z]/)) {
+      password.classList.add("error");
+      errorMessage.textContent = "Password needs to have at least 1 upper case letter.";
+      return;
+    }
+    if (!password.value.match(/\d+/g)) {
+      password.classList.add("error");
+      errorMessage.textContent = "Password needs to have at least 1 number.";
+      return;
+    }
+    errorMessage.textContent = "Form added successfully";
+    setTimeout(() => {
+      window.location.reload();
+    }, 5000);
+  };
+  const form = document.querySelector("form");
+  form.addEventlistener("submit", submit);
+
+
+});
